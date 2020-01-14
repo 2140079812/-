@@ -1,0 +1,146 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <title>QQ手游等级测试加速 - 秒加速0.2天</title>
+    <meta name="keywords" content="QQ手游一键秒加速0.2天">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  <link href="./css/black-dashboard.min.css" rel="stylesheet" />
+    <script>
+        (function () {
+        })();
+
+        $.extend({
+            Confirm: function () {
+                var template = multiline(function () {/*!@preserve
+						<style>
+							.jquery-confirm-content p{margin:.7em 0 0;padding:0;}
+							.jquery-confirm-cancel:hover,.jquery-confirm-ok:hover{background:#f0f0f0;}
+						</style>
+						<div style="position:fixed;width:100%;height:100%;display:table;text-align:center;z-index:100001;top:0;left:0;">
+						<div style="position:absolute;width:100%;height:100%;top:0;left:0;background:#000;opacity:0.2;filter: alpha(opacity=40);"></div>
+						<div style="position:relative;display:table-cell;vertical-align:middle;">
+							<div style="display:inline-block;background:#fff;border-radius:3px;text-align:left;overflow:hidden;max-width:90%;">
+								<div style="text-align:left;padding:30px;line-height:1.5;border-bottom:1px solid #F2F2F2;">
+									<div class="jquery-confirm-content" style="font-size:14px;margin-top:.7em; text-align:center; color:#666666;"></div>
+								</div>
+								<div style="display:inline-table;width:100%;line-height:40px;height:40px;font-size:16px;text-align:center;">
+									<a class="jquery-confirm-cancel" href="javascript:;" style="display:table-cell;box-sizing:border-box;color:#3498DB;text-decoration:none;text-align:center;">取消</a>
+									<a class="jquery-confirm-ok" href="javascript:;" style="display:table-cell;box-sizing:border-box;color:#33CC33;text-decoration:none;text-align:center;">确定</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					*/
+                    console.log()
+                });
+
+                return function (title, content, btns_num) {
+                    var title = title || '',
+                        content = content || '',
+                        btns_num = btns_num || 2,
+                        ok, cancel, result = {
+                            ok: function (func) {
+                                ok = func;
+                                return result;
+                            },
+                            cancel: function (func) {
+                                cancel = func;
+                                return result;
+                            }
+                        };
+
+                    var dom = $('<div>').html(template);
+
+                    btns_num == 1
+                        ? dom.find('.jquery-confirm-cancel').remove()
+                        : dom.find('.jquery-confirm-ok').css('border-left', '1px solid #F2F2F2');
+
+                    dom.on('touchmove', function () {
+                        return false;
+                    });
+                    dom.find('.jquery-confirm-title').html(title);
+                    dom.find('.jquery-confirm-content').html(content);
+                    dom.find('.jquery-confirm-ok').on('click', function () {
+                        ok && ok();
+                        dom.remove();
+                    });
+                    dom.find('.jquery-confirm-cancel').on('click', function () {
+                        cancel && cancel();
+                        dom.remove();
+                    });
+                    dom.appendTo($('body'));
+
+                    return result;
+                }
+
+                function multiline(fn) { 
+                    var reCommentContents = /\/\*!?(?:\@preserve)?[ \t]*(?:\r\n|\n)([\s\S]*?)(?:\r\n|\n)[ \t]*\*\//;
+                    if (typeof fn !== 'function') {
+                        throw new TypeError('Expected a function');
+                    }
+                    var match = reCommentContents.exec(fn.toString());
+                    if (!match) {
+                        throw new TypeError('Multiline comment missing.');
+                    }
+                    return match[1];
+                };
+            }()
+        });
+
+
+        $(document).ready(function () {
+            $('#start').click(function () {-
+                $.ajax({
+                    type: "get",
+                    url: "https://reader.sh.vip.qq.com/cgi-bin/common_async_cgi?g_tk=5381&plat=1&version=6.6.6&param=%7B%22key0%22%3A%7B%22param%22%3A%7B%22bid%22%3A13792605%7D%2C%22module%22%3A%22reader_comment_read_svr%22%2C%22method%22%3A%22GetReadAllEndPageMsg%22%7D%7D",
+                    dataType: "jsonp",
+                    async: true,
+                    success: function (a) {
+                        $.Confirm("", "加速请求已提交至服务器，如未登陆QQ空间则加速不成功 - by QIEDG", 1);
+                    },
+                    error: function (a) {
+                        $.Confirm("", "加速请求已提交至服务器，如未登陆QQ空间则加速不成功 - by QIEDG", 1);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body class="login-page">
+  <!-- 内容 -->
+<body style="background-image: url(./bj.jpg);background-attachment: fixed;background-repeat: no-repeat;background-size: cover;-moz-background-size: cover;">
+      <!--   内容① -->
+      <div class="content">
+        <div class="container">
+          <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+            <div class="card card-lock card-white text-center">
+              <div class="card-header">
+                <img id="qqtx" name="qqtx" src="https://q1.qlogo.cn/g?b=qq&nk=123455&s=100" alt="image">
+              </div>
+			  <form action="" method="post">
+              <div class="card-footer">
+				<input type="button" class="btn btn-success btn-round btn-lg" style="color: white"  onclick="window.open('https://i.qq.com')" value="① 登录需加速的QQ">
+              </div>
+              <div class="card-footer">
+				<input type="button" class="btn btn-primary btn-round btn-lg" style="color: white" id="start" value="② 已登录，点我加速">
+              </div>
+            <div class="my_box" style="height:auto; line-height:24px; font-size:14px; padding:10px;color:#f979a1;background: #fff;border: 2px dashed #f97979">
+            <div class="my_right" style="width: calc(100% - 8px)"><strong>使用方法：</strong>请先点击登录需加速的QQ按钮，进行登录！登录后可直接关闭QQ空间页面 然后回到本站刷新一下，登录成功后点击加速 秒加速成功！
+                        </div>
+                        </div>
+			  </form><a href="http://123.57.80.217/"><i class="ion ion-email-unread"></i> 晨曦影视！</a>
+            </div>
+          </div>
+    </div>
+    </div>
+</body>
+</html>
